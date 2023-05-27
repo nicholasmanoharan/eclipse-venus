@@ -19,6 +19,14 @@ Our current released version as of May 28th, 2023 is a demo version of _Eclipse_
 ## Why Eclipse?
 ### e·clipse
 _noun_
-> an obscuring of the light from one celestial body by the passage of another between it and the observer or between it and its source of illumination
+> an obscuring of the light from one celestial body by the passage of another between it and the observer or between it and its source of illumination (Oxford Dictionary)
 
 When two celestial bodies perfectly align, it creats an uncommon phenomena called an "eclipse". We took this idea and related it to the idea of aligning students' schedules with each other to find openings in their busy times to come together and hang out. Eclipses are hard to come across, but we want to make it easy for students to find the "eclipse"--the alignment--in their schedules and find time for each other. Finding open time slots can be difficult for college students, but with _Eclipse_, it doesn't have to be. As a student-focused webapp, _Eclipse_'s number one priority is to put emphasis on student's busy times so they can find the free times together. 
+
+## Credits
+Created at [VenusHacks]([url](https://venushacks.com/)) 2023
+Design: [Emily Avey]([url](https://github.com/toratan123))
+Facilitator: [Nicholas Manoharan]([url](https://github.com/nicholasmanoharan))
+Front-end Lead: [Bobby Zhong]([url](https://github.com/bobbyzhong))
+Back-end Lead: Bryan Cho
+Developers: Emily Avey, Nicholas Manoharan, Bobby Zhong, Bryan Cho
