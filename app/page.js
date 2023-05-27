@@ -1,95 +1,186 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import Image from "next/image";
+import Button from "./components/Button";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const [formData, setFormData] = useState({
+        eventName: "",
+        description: "",
+        members: "",
+    });
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    const name = "john";
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+    const handleInput = (e) => {
+        const fieldName = e.target.name;
+        const fieldValue = e.target.value;
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        setFormData((prevState) => ({
+            ...prevState,
+            [fieldName]: fieldValue,
+        }));
+    };
+    const createEvent = (e) => {
+        router.push(router.push("/page2"));
+    };
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+    return (
+        <main>
+            <div class="main_page h-screen">
+                <head>
+                    <title>Event Settings</title>
+                </head>
+                <div class="top_bar">
+                    <img class="logo" src="/logo.png" />
+                    <p class="logo_text">Schedule With Eclipse!</p>
+                </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+                <div>
+                    <input
+                        id="event_name"
+                        type="text"
+                        placeholder="Event Name"
+                        name="eventName"
+                        onChange={handleInput}
+                    />
+
+                    <input
+                        id="description"
+                        type="text"
+                        placeholder="Members"
+                        name="members"
+                        onChange={handleInput}
+                    />
+
+                    <p>select schedule time range</p>
+                    <div class="time_selector">
+                        <select>
+                            <option>12:00 AM</option>
+                            <option>1:00 AM</option>
+                            <option>2:00 AM</option>
+                            <option>3:00 AM</option>
+                            <option>4:00 AM</option>
+                            <option>5:00 AM</option>
+                            <option>6:00 AM</option>
+                            <option>7:00 AM</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                            <option>10:00 PM</option>
+                            <option>11:00 PM</option>
+                        </select>
+                        <p>to</p>
+                        <select>
+                            <option>12:00 AM</option>
+                            <option>1:00 AM</option>
+                            <option>2:00 AM</option>
+                            <option>3:00 AM</option>
+                            <option>4:00 AM</option>
+                            <option>5:00 AM</option>
+                            <option>6:00 AM</option>
+                            <option>7:00 AM</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                            <option>10:00 PM</option>
+                            <option>11:00 PM</option>
+                        </select>
+                        <p>PDT</p>
+                    </div>
+
+                    <p>select days</p>
+                    <div class="container">
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Sunday</span>
+                            </label>
+                        </div>
+
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Monday</span>
+                            </label>
+                        </div>
+
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Tuesday</span>
+                            </label>
+                        </div>
+
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Wednesday</span>
+                            </label>
+                        </div>
+
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Thursday</span>
+                            </label>
+                        </div>
+
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Friday</span>
+                            </label>
+                        </div>
+
+                        <div class="cat">
+                            <label>
+                                <input type="checkbox" value="1" />
+                                <span>Saturday</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create_event">
+                    <a
+                        onClick={() => {
+                            createEvent();
+                        }}
+                    >
+                        //Create Event
+                    </a>
+                </div>
+            </div>
+
+            <button id="nextButton"> Next Page </button>
+        </main>
+    );
 }
