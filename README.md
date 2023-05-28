@@ -1,3 +1,5 @@
+<img src="/public/logo_img.png" alt="Eclipse Logo" style="width:150px; height:150px"/>
+
 # Eclipse
 The Webapp Scheduler for College Students
 
@@ -25,8 +27,8 @@ When two celestial bodies perfectly align, it creats an uncommon phenomena calle
 
 ## Credits
 Created at [VenusHacks]([url](https://venushacks.com/)) 2023
-Design: [Emily Avey]([url](https://github.com/toratan123))
-Facilitator: [Nicholas Manoharan]([url](https://github.com/nicholasmanoharan))
-Front-end Lead: [Bobby Zhong]([url](https://github.com/bobbyzhong))
-Back-end Lead: Bryan Cho
-Developers: Emily Avey, Nicholas Manoharan, Bobby Zhong, Bryan Cho
+<br>Design: [Emily Avey]([url](https://github.com/toratan123))
+<br>Facilitator: [Nicholas Manoharan]([url](https://github.com/nicholasmanoharan))
+<br>Front-end Lead: [Bobby Zhong]([url](https://github.com/bobbyzhong))
+<br>Back-end Lead: Bryan Cho
+<br>Developers: Emily Avey, Nicholas Manoharan, Bobby Zhong, Bryan Cho
